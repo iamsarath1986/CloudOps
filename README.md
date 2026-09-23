@@ -1,62 +1,86 @@
 # Cloud / Platform / DevOps Roadmap — **Runway**
 
-*A single production-grade project that closes the gap between where you are and a Technical Engineer – Public Cloud role in Group IT (Platform Engineering) — and, more importantly, between where you are and being able to operate real cloud systems.*
+*One production-grade, multi-cloud platform, built and operated over roughly two years alongside a full-time job. It closes the gap between where you are and the **Senior Technical Engineer – Public Cloud** role (Group IT, Platform Engineering). More importantly, it closes the gap between you and being able to design, run and troubleshoot real cloud platforms and the AI workloads on them.*
 
 ---
 
 ## The short version
 
-**The job**, in the posting's own words: *"unify control across datacentres, networks, public and private cloud environments"* with *"a strong emphasis on automation, agility, and cost optimization"*, plus *"incident management, problem management, service level management, capacity management, availability management, and IT service continuity."*
+**The job**, in the posting's own words: *"design, develop, and deliver secure, scalable, and reliable public cloud solutions"* on **AWS and Azure**, acting as *"a technical expert within Public Cloud, supporting cloud automation, workload onboarding, platform engineering, and the development of internal self-service capabilities"*, while driving *"Infrastructure as Code, CI/CD, observability, governance, and FinOps practices"*.
 
-**Three things that shapes:**
+**What the senior version of the role changes:**
 
-1. It is **half build, half run.** Six ITIL processes are written into the role definition. Most cloud portfolios stop at "I deployed it"; this one starts there.
-2. It is **hybrid**, not greenfield. There is a datacentre and it is not going away.
-3. The platform **has customers** — *"cloud workload onboarding, automation and self-service capabilities"*. That is platform engineering, and it is the requirement almost no candidate can evidence.
+1. **Two clouds, operated at proficiency.** Not a translation exercise at the end. Both AWS and Azure are named, and so are EKS and AKS.
+2. **Design authority.** Solution architecture to EA standards, guiding project managers on cost and timescales, and owning changes and end-of-life replacement. You are expected to decide, not just implement.
+3. **Platform as a product.** Self-service portals, internal developer tools and governed onboarding of applications onto a *"large public cloud footprint"*.
+4. **Operations.** Incidents resolved within service levels, problem management, changes you own, L1/L2 monitoring configured in the event management system (EMS), and documentation that includes a data catalogue.
 
-**The project:** *Runway* — a small internal cloud platform on Azure, the two workloads that run on it, a third throwaway workload that proves onboarding generalises, and a strictly read-only AI operations assistant. The application layer stays deliberately boring; the platform is the subject.
+**The project:** *Runway* is an internal platform spanning AWS (EKS) and Azure (AKS). It provides a golden path and a self-service portal, and runs a deliberately boring Python workload plus a shared AI gateway and a strictly read-only AI operations assistant (MCP). No static credentials exist anywhere in it, not even between clouds.
 
-**The plan:** 9 months at 8–12 h/week, on a $30–60/month Azure budget with build/destroy discipline. 15 milestones. Roughly 16 deliberately-injected incidents, each worked to a written record.
+**The plan:** 23 milestones over **about 24 months** at 8–12 h/week (84 build weeks + 9 revision weeks). **AWS comes first, Azure second.** Around 36 deliberately injected failure scenarios, each worked to a written record. The budget is roughly $50–90/month, kept down by build/destroy discipline.
 
 ---
 
 ## The documents
 
-| Step | File | What it settles |
+| § | File | What it settles |
 |:--:|---|---|
-| 1 | [Job analysis](00-job-analysis.md) | The full JD broken down, every requirement categorised and prioritised P0–P3, and the honest gap read |
-| 2 | [Target profile](01-target-profile.md) | The seven adjacent roles drawn by their real boundaries, and where you should sit across them |
-| 3 | [Skills gap](02-skills-gap.md) | 38 competencies at Beginner → Intermediate → Advanced → Production-ready, with your start and target |
-| 4 | [Cloud choice](03-cloud-choice.md) | Why Azure, what the counter-arguments are, the concept→provider translation table, and the cost discipline |
-| 5 | [The project](04-the-project.md) | Runway: the five components, why this project and not the obvious alternatives, what is out of scope |
-| 6 | [Architecture](05-architecture.md) | The diagram, why each component exists, three request paths to know by heart, and what was deliberately excluded |
-| 7 | [Learning path](06-learning-path-phases-00-05.md) | 18 phases. Concepts → labs → implementation → production reality → **failure exercises** → verification → deliverable. Also [6–11](07-learning-path-phases-06-11.md) and [12–17](08-learning-path-phases-12-17.md) |
-| 8 | [Milestones](milestones/README.md) | 15 delivery units with learning topics, build, cloud resources, DevOps work, ops exercise, security, outcome and evidence |
-| 9 | [Operations playbook](09-operations-playbook.md) | The Detect→Document loop, a severity matrix, templates, 16 scenarios, and three fully worked examples |
-| 10 | [Platform engineering](10-platform-engineering.md) | Golden paths, module design as API design, reusable workflows, policy as the precondition for self-service |
-| 11 | [AI in cloud operations](11-ai-in-cloud-operations.md) | Running an AI service as a workload; then agents, MCP, and read-only-by-construction |
-| 12 | [Certifications](12-certifications.md) | Which two or three are worth it, when you will be ready, and how not to let them derail the build |
-| 13–14 | [Timeline and weekly pattern](13-timeline-and-weekly-pattern.md) | 6-, 9- and 12-month versions with exactly what each drops; the dependency graph; the weekly rhythm; revision weeks |
-| 15 | [Progress measurement](14-progress-measurement.md) | Explain → Build → Troubleshoot → Design → Operate, defined per technology, plus the twenty questions |
-| 16 | [Portfolio](15-portfolio.md) | What the repository must contain, how to write the README, how to present it, and the honesty rule |
-| 17 | [Career skill map](16-career-skill-map.md) | The final matrix, the four depth categories, and the progression to AI Platform Engineer |
+| 1 | [JD skills analysis](01-jd-skills-analysis.md) | Every requirement categorised, with its expected depth and the evidence in the JD for that depth; the prerequisites the JD assumes but never names |
+| 2 | [Skills gap and prerequisites](02-skills-gap-and-prerequisites.md) | Where you are and where you need to be on the L0–L5 scale, and the gaps that matter most |
+| 3 | [Target engineer profile](03-target-engineer-profile.md) | Adjacent roles, the blend you are aiming for, depth tiers, what you are *not* becoming |
+| 4 | [Learning dependency map](04-learning-dependency-map.md) | What must come before what, and why |
+| 5 | [Production project proposal](05-production-project-proposal.md) | Runway: its components, why this project, JD→project mapping, how it evolves |
+| 6 | [Final project architecture](06-final-project-architecture.md) | Diagrams, Problem → Options → Decision → Trade-offs, request paths, what was excluded |
+| 7 | [Phase-by-phase roadmap](07-phase-roadmap.md) | The 23 phases: purpose, placement, what each unlocks |
+| 8 | [Detailed milestones](milestones/README.md) | M00–M22: concepts, labs, build, deliberate problems, troubleshooting, deliverables, completion criteria, resources |
+| 9 | [Hands-on labs](09-hands-on-labs.md) | The lab system and an index of every key lab |
+| 10 | [Failure and troubleshooting](10-failure-and-troubleshooting.md) | The operations playbook: the incident loop, severity, templates, scenarios S01–S36, worked examples |
+| 11 | [AWS learning path](11-aws-learning-path.md) | AWS across the whole roadmap |
+| 12 | [Azure learning path](12-azure-learning-path.md) | Azure as the second cloud, taught through its differences from AWS |
+| 13 | [Terraform learning path](13-terraform-learning-path.md) | From first apply to the way a platform team runs Terraform |
+| 14 | [Docker & Kubernetes learning path](14-docker-kubernetes-learning-path.md) | Container internals → EKS → AKS → multi-cluster |
+| 15 | [CI/CD learning path](15-cicd-learning-path.md) | Release engineering, testing, GitOps, change records |
+| 16 | [Observability & SRE learning path](16-observability-sre-learning-path.md) | Signals, SLOs, alerting, ITIL processes in engineering terms |
+| 17 | [Security & governance learning path](17-security-governance-learning-path.md) | Identity, supply chain, policy as code, landing zones, threat models |
+| 18 | [Platform engineering learning path](18-platform-engineering-learning-path.md) | Manual ops → golden paths → internal developer platform |
+| 19 | [FinOps learning path](19-finops-learning-path.md) | Allocation, optimisation, Kubernetes and AI cost, bill investigations |
+| 20 | [AI infrastructure learning path](20-ai-infrastructure-learning-path.md) | Operating AI workloads, agents and MCP, and how SRE practice changes for them |
+| 21 | [Certification strategy](21-certification-strategy.md) | Which certifications, when, and why they come after the build work |
+| 22 | [12–24 month timeline](22-timeline.md) | Monthly milestones, how the project progresses, the variants, what to cut when behind |
+| 23 | [Weekly study routine](23-weekly-study-routine.md) | The weekly rhythm, weekend sessions, revision weeks, mentor sessions |
+| 24 | [Competency matrix](24-competency-matrix.md) | L0–L5 per skill, the evidence needed to move up, target levels by month |
+| 25 | [Production readiness checklist](25-production-readiness-checklist.md) | The final review, and the "design it yourself" capability test |
+
+**Appendices:** [A1 — Cloud architecture concepts & AWS↔Azure mapping](appendix/A1-cloud-architecture-concepts.md) · [A2 — Documentation standards & templates](appendix/A2-documentation-standards.md) · [A3 — Portfolio and interview](appendix/A3-portfolio-and-interview.md)
 
 ---
 
-## The five rules
+## How we work: mentor mode
 
-1. **Understand before you type.** Mondays have no terminal. The roadmap is built around *why*, because the technologies will change and the judgement will not.
-2. **Break it on purpose.** The failure exercises are not garnish — they are where most of the learning is, and they produce the incident records that make the portfolio unusual.
-3. **Write it down while it is happening.** A timeline reconstructed afterwards is fiction. Friday is documentation day for exactly this reason.
-4. **Measure, don't claim.** Every number in your README — rollback time, RTO, request ceiling, onboarding time, monthly cost — must be one you produced and can reproduce live.
-5. **`make down` at the end of every session.** Your budget and your infrastructure-as-code discipline are the same habit.
+This roadmap is built to be followed *with* a mentor, not read like a textbook. For every major task:
 
-## What makes this different from every other cloud roadmap
+1. I explain the concept, why we need it, how it works internally, the architecture, the alternatives and the trade-offs.
+2. You get the implementation task and **attempt it yourself**. You only get complete solutions if you explicitly ask for them.
+3. I review your work, point out problems, and help you improve it.
+4. Then I inject a failure, you troubleshoot it, and we compare your approach with how a production engineer would handle it.
 
-Most stop at Milestone 9. The last six — operations, capacity, continuity, governance and cost, the golden path, and a *bounded* AI assistant — are where the JD actually lives, and they are the ones you will be most tempted to skip because none of them produces an impressive screenshot.
+Every milestone ends with a **Mentor checkpoints** section listing what to bring for review and the kind of failure that will follow.
 
-Milestones 10 and 13 are the two you must not cut.
+## The six rules
+
+1. **Understand before you type.** Mondays have no terminal. The technologies will change; the judgement will not.
+2. **Break it on purpose.** The failure exercises are where most of the learning happens, and they produce the incident records that make the portfolio unusual.
+3. **Write it down while it is happening.** A timeline reconstructed afterwards is fiction.
+4. **Measure, don't claim.** Every number (rollback time, RTO/RPO, request ceiling, onboarding time, cost per request, monthly spend) must be one you produced and can reproduce live.
+5. **One cloud's concept at a time.** Learn the idea, build it on AWS, then learn Azure through its differences. Never do every exercise twice.
+6. **`make down` at the end of every session.** Your budget discipline and your infrastructure-as-code discipline are the same habit.
+
+## What makes this different from other cloud roadmaps
+
+Most stop once Kubernetes is running. The part of this JD that separates senior candidates comes after that: operations and change ownership (M11), capacity and continuity (M12), governance and FinOps (M15–M16), the golden path and self-service portal (M17–M18), and a *bounded* AI layer (M19–M20). None of these produces an impressive screenshot, so they are the ones you will be most tempted to skip.
+
+**M11 and M17 are the two you must not cut.**
 
 ## Relationship to the other roadmap in this repository
 
-`../roadmap/` is a separate, untouched **AI Engineer** track for OpsPilot: RAG, self-hosted inference, evaluation harnesses, diagnosis quality. Different career direction, different project. If the two ever meet, the honest way is to deploy OpsPilot as a fourth workload through Runway's golden path — a genuinely strong portfolio moment, and not part of this roadmap.
+`../roadmap/` is a separate, untouched **AI Engineer** track for OpsPilot: retrieval-augmented generation (RAG), self-hosted inference, evaluation harnesses and diagnosis quality. It is a different career direction and a different project. If the two ever meet, the honest way is to onboard OpsPilot as another workload through Runway's golden path. That would be a genuinely strong portfolio moment, but it is not part of this roadmap.
