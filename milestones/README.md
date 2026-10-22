@@ -1,5 +1,7 @@
 # Section 8 — Detailed Milestones
 
+**Current execution plan (2026-10-06):** deploy the existing FinanceTracker project and learn concepts as each deployment step needs them. These milestones are reference material, not required assignments. Standalone exercises, deliberate failure drills, design homework, and mentor-question gates are superseded by the [current execution plan](../README.md#current-execution-plan--financetracker-deployment).
+
 There are twenty-three milestones, one per phase, and each one must leave something working in the Runway repository. **Phases are the syllabus and milestones are the unit of delivery.** [Section 7](../07-phase-roadmap.md) explains why each phase sits where it does. The files below say what you learn, what you build, what you break, what you hand in and how you prove you are finished.
 
 The **track documents** ([§11–§20](../11-aws-learning-path.md)) follow one discipline, such as Terraform or observability, through every milestone that touches it. Use a milestone file to find out what to do this week. Use a track to see how one skill develops over two years.

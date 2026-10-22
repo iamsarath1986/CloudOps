@@ -1,5 +1,24 @@
 # Cloud / Platform / DevOps Roadmap — **Runway**
 
+## Current execution plan — FinanceTracker deployment
+
+Updated: 2026-10-06.
+
+We will learn cloud and platform engineering by deploying and operating the existing **FinanceTracker** project at `/home/user/PycharmProjects/FinanceTracker`. It already runs locally in Docker. We will reuse its Vue frontend, FastAPI backend, PostgreSQL database, and production Docker Compose configuration rather than build the Runway sample application first.
+
+This plan takes precedence over the original milestone sequence and mentor rules below:
+
+1. Work toward a real deployment in small, concrete steps. Explain each concept when that step needs it, then guide the implementation and explain the result.
+2. Do not assign understanding quizzes, standalone practice exercises, or deliberate failure drills. Check actual deployment behavior through builds, health checks, application use, and logs.
+3. Do not require ADR drafts, design homework, or completion-criteria questions before deployment work. Record useful decisions and operating instructions as the project progresses.
+4. Hosting target: **AWS**, confirmed on 2026-10-06. Start with the existing production Compose stack on one EC2 instance. Confirm account access, budget, domain, and whether existing data must be transferred before provisioning. Choose the region and instance size using the budget and application requirements.
+5. Introduce networking, identity, Linux administration, DNS, HTTPS, secrets, persistent storage, backups, and logs as the deployment requires them. Add infrastructure as code, CI/CD, observability, and managed services as subsequent project increments. Revisit Kubernetes and multi-cloud when there is a concrete reason to introduce them.
+6. Preserve application data. The original automatic `make down` rule does not apply to the deployed FinanceTracker service; teardown requires an explicit purpose and a data-preservation plan.
+
+The documents below remain a reference curriculum and the original Runway proposal. Their application-building assignments, fixed dates, mandatory drills, and mentor checkpoints are not the active work plan.
+
+---
+
 *One production-grade, multi-cloud platform, built and operated over roughly two years alongside a full-time job. It closes the gap between where you are and the **Senior Technical Engineer – Public Cloud** role (Group IT, Platform Engineering). More importantly, it closes the gap between you and being able to design, run and troubleshoot real cloud platforms and the AI workloads on them.*
 
 ---
